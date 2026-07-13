@@ -1,0 +1,186 @@
+const DATA = [
+{s:"Trânsito", f:"Vias rurais: pavimentadas x não pavimentadas", b:"Rodovias → pavimentadas\nEstradas → não pavimentadas"},
+{s:"Trânsito", f:"Vias urbanas: tipos", b:"Via de trânsito rápido → sem cruzamentos, fluxo livre\nVia arterial → liga regiões da cidade\nVia local → acesso à residência"},
+{s:"Processo Penal", f:"Ação penal: requisição x requerimento", b:"Requisição → feita por autoridade competente\nRequerimento → pedido feito pelo ofendido"},
+{s:"Constitucional", f:"Rol do art. 5º", b:"O rol do artigo 5º é exemplificativo e não taxativo"},
+{s:"Legislação Penal", f:"Crimes impossíveis", b:"Ineficácia absoluta do meio → o meio utilizado nunca funciona\nImpropriedade absoluta do objeto → o alvo torna o crime impossível"},
+{s:"Lei de Drogas", f:"Tratamento ambulatorial", b:"Tratamento onde a pessoa não precisa ficar internada: apenas vai para consulta, recebe acompanhamento e alta para casa"},
+{s:"Processo Penal", f:"Denúncia sem inquérito", b:"A denúncia pode ser oferecida sem o inquérito concluído, ou até mesmo sem inquérito\nCondição: indícios de autoria e prova da materialidade"},
+{s:"Lei de Drogas", f:"Lei 11.343/2006 — SISNAD", b:"O SISNAD é totalmente contra a padronização do tratamento\nA lei exige que o projeto terapêutico seja individualizado e pautado nas necessidades de cada pessoa"},
+{s:"Crimes Hediondos", f:"Prisão temporária em hediondos", b:"30 dias, prorrogável por mais 30 dias se houver extrema necessidade"},
+{s:"RDPMAL", f:"Classificação comportamental", b:"Excepcional\nÓtimo\nBom\nInsuficiente\nMau → quebra de expectativa"},
+{s:"Português", f:"Conectivos: adversativas x concessivas", b:"Adversativas → mas, porém, contudo, todavia, no entanto\nConcessivas → embora, ainda que, mesmo que, apesar de"},
+{s:"Constitucional", f:"Concessão, permissão e autorização", b:"União → concessão, permissão e autorização\nEstados → apenas concessão\nMunicípios → concessão e permissão"},
+{s:"Legislação Especial", f:"Crimes de racismo — o que a lei abrange", b:"Raça, cor, etnia, religião, procedência nacional"},
+{s:"Legislação Especial", f:"Lei de Abuso de Autoridade — efeitos da condenação", b:"Obrigação de reparar o dano causado → automático\nInabilitação para o cargo → se reincidente\nPerda do cargo/mandato/função pública → se reincidente"},
+{s:"Constitucional", f:"Direitos negativos x positivos", b:"Direitos negativos (1ª geração) → o Estado NÃO pode interferir\nDireitos positivos (2ª geração) → o Estado TEM o dever de intervir"},
+{s:"Português", f:"Verbo \"visar\" — dois sentidos", b:"1º sentido (pretender/almejar) → exige preposição \"a\"\n2º sentido (apontar/mirar) → não exige preposição"},
+{s:"Português", f:"\"Por que\" x \"porquê\"", b:"A estrutura \"por que / por quê\" substitui por \"por qual motivo/razão\" para conferir"},
+{s:"Administrativo", f:"Bens públicos: uso comum, especial, dominical", b:"Uso comum → de todos, sem dono específico\nUso especial → do serviço, afeto à função pública\nDominicais → do patrimônio, sem função no momento"},
+{s:"Informática", f:"Gerações de vírus/antivírus", b:"1ª geração → detecção por assinatura\n2ª geração → detecção heurística (características suspeitas)"},
+{s:"EPMAL", f:"Inatividade — prazos", b:"Pensão → 35 anos, com 30 de serviço ativo\nReserva → 30 anos\nReforma → 12 anos"},
+{s:"Administrativo", f:"Licitação — modalidade culposa", b:"Nos crimes de licitação não é admitida a modalidade culposa"},
+{s:"Constitucional", f:"Ação popular — quem pode propor", b:"Apenas uma pessoa física pode propor a ação popular"},
+{s:"Direito Penal", f:"Teoria do crime — excludentes", b:"Ilicitude → o fato é típico, mas não ilícito\nCulpabilidade → o fato é típico e ilícito, mas o agente não pode ser punido\nPunibilidade → o fato é típico, ilícito e o agente é culpável, mas não pode punir"},
+{s:"Penal Militar", f:"Crimes contra a administração militar", b:"Peculato → desvia bem público\nCorrupção ativa → oferece vantagem indevida\nConcussão → exige vantagem indevida\nPrevaricação → retarda ou deixa de praticar ato de ofício"},
+{s:"Administrativo", f:"Requisitos dos atos administrativos", b:"Objeto → resultado prático\nFinalidade → interesse público\nMotivo → situação de fato\nMotivação → explicação\nForma → como é feito"},
+{s:"Administrativo", f:"Responsabilidade civil do Estado", b:"Ato lícito → princípio da isonomia\nAto ilícito → princípio da legalidade"},
+{s:"Penal Militar", f:"Justiça militar estadual — competência", b:"A Justiça Militar Estadual não julga civis"},
+{s:"Administrativo", f:"Atos administrativos — sentido subjetivo", b:"Conjunto de entidades e agentes públicos encarregados de exercer atividade do Estado\nPergunta-chave: \"Quem faz?\""},
+{s:"Administrativo", f:"Fatos administrativos", b:"São acontecimentos materiais decorrentes da administração pública\nPergunta-chave: \"O que faz?\""},
+{s:"Administrativo", f:"Princípios dos atos administrativos", b:"Presunção (de legitimidade)\nImperatividade\nAutoexecutoriedade\nTipicidade"},
+{s:"Administrativo", f:"Autotutela", b:"A administração pública possui o poder de controlar os próprios atos: anulando-os quando ilegais e revogando-os quando inconvenientes ou inoportunos"},
+{s:"Direito Penal", f:"Concurso de pessoas", b:"Todos os que concorrem para o mesmo crime respondem pelo mesmo crime"},
+{s:"Legislação Especial", f:"Organização criminosa: ação controlada x infiltração", b:"Ação penal controlada → não precisa de autorização judicial, apenas aviso prévio\nInfiltração → sempre precisa de autorização judicial"},
+{s:"Direito Penal", f:"Fases do crime (iter criminis)", b:"Cogitação → Preparação → Execução → Consumação / Exaurimento"},
+{s:"Direito Penal", f:"Retroatividade x ultratividade", b:"Retroatividade → aplicação de lei nova mais benéfica a fatos ocorridos antes da sua vigência\nUltratividade → aplicação de lei antiga (já revogada) a fatos ocorridos antes da nova lei"},
+{s:"Administrativo", f:"Autarquias — cargos de chefia", b:"Cargos de chefia são de livre nomeação e exoneração\nAutarquias especiais → dirigente com mandato fixo/temporário; exercício regular até o fim do mandato; vedada exoneração livre"},
+{s:"Penal Militar", f:"Excludentes de ilicitude (Penal Militar)", b:"Legítimo receio\nEstado de necessidade\nEstrito cumprimento do dever legal\nExercício regular do direito"},
+{s:"Administrativo", f:"Excludentes de responsabilidade civil do Estado", b:"Culpa concorrente da vítima\nCulpa concorrente de terceiro"},
+{s:"Português", f:"Vírgula com advérbios", b:"Advérbio de até 2 palavras → vírgula facultativa\nAdvérbio de 3 ou mais palavras → vírgula obrigatória"},
+{s:"Direito Penal", f:"Extraterritorialidade da lei penal", b:"Incondicionada → lei brasileira aplicada sem exigir condições\nCondicionada → aplicada se existirem as condições necessárias\nHipercondicionada → estrangeiro pratica crime contra brasileiro fora do país"},
+{s:"Português", f:"Acentuação de paroxítonas", b:"Todas as paroxítonas terminadas em ditongo são acentuadas"},
+{s:"Penal Militar", f:"CPM — aplicação a civil", b:"O civil não comete crime militar, exceto contra militares estaduais, federais ou forças armadas"},
+{s:"Legislação Especial", f:"Estatuto do Desarmamento — tipos de arma", b:"Arma com defeito → não é crime, se comprovado por perícia\nArma desmuniciada → é crime\nArma desmontada → é crime"},
+{s:"Legislação Especial", f:"SINARM x SIGMA", b:"SINARM (Polícia Federal) → controla armas de uso permitido\nSIGMA (Exército) → controla armas de uso restrito"},
+{s:"Penal Militar", f:"CPM — extraterritorialidade", b:"No Código Penal Militar existe apenas a extraterritorialidade incondicionada"},
+{s:"Direito Penal", f:"Tempo e lugar do crime", b:"Tempo do crime → teoria da atividade (momento da ação/omissão)\nLugar do crime → teoria da ubiquidade (lugar da ação ou do resultado)"},
+{s:"Crimes Hediondos", f:"Tráfico privilegiado — requisitos", b:"Só ocorre quando o réu preenche TODOS os requisitos:\nréu primário, bons antecedentes, não se dedica a atividades criminosas, não integra organização criminosa"},
+{s:"Português", f:"Pronome possessivo — retomante", b:"O retomante de um pronome possessivo é a PESSOA, e não o objeto possuído"},
+{s:"Constitucional", f:"Cassação de direitos políticos", b:"É vedada a cassação dos direitos políticos em todos os casos"},
+{s:"Crimes Hediondos", f:"Rol dos crimes hediondos", b:"Os crimes hediondos têm rol taxativo (lista fechada)"},
+{s:"Penal Militar", f:"Crime propriamente x impropriamente militar", b:"Propriamente militar → só pode ser cometido por militar, previsto exclusivamente no CPM\nImpropriamente militar → pode ser cometido por civil ou militar, previsto no CPM e no CP"},
+{s:"Informática", f:"Limite de caracteres em nome de arquivo", b:"Cada pasta ou arquivo pode ter até 255 caracteres no nome"},
+{s:"Informática", f:"Phishing x Pharming x Vishing", b:"Phishing → e-mail ou site falso que rouba dados\nPharming → redireciona a URL para site falso mesmo digitando o endereço certo\nVishing → phishing por ligação telefônica"},
+{s:"Administrativo", f:"Extinção de ato administrativo", b:"A mera extinção de um ato administrativo que já gerou efeitos não gera efeitos retroativos (não é anulação)"},
+{s:"Informática", f:"Backup incremental x diferencial", b:"Incremental → somente os arquivos modificados desde o ÚLTIMO backup\nDiferencial → todos os arquivos alterados desde o último backup COMPLETO"},
+{s:"Processo Penal", f:"Prisão temporária — prazos", b:"Crimes comuns → 5 dias, prorrogável por igual período em caso de extrema necessidade\nCrimes hediondos e equiparados → 30 dias, também prorrogável"},
+{s:"Crimes Hediondos", f:"Crimes equiparados a hediondos", b:"Tortura, tráfico de drogas e terrorismo"},
+{s:"Administrativo", f:"Modalidades de licitação", b:"Concorrência, Concurso, Leilão, Pregão, Diálogo Competitivo"},
+{s:"Administrativo", f:"Inexigibilidade de licitação", b:"Não há possibilidade de competição, pois a própria natureza do objeto/serviço não permite a licitação"},
+{s:"Administrativo", f:"Hipóteses de inexigibilidade (FACAS)", b:"Fornecedor exclusivo\nArtista consagrado\nCredenciamento\nAquisição de imóvel único\nServiço de natureza técnica singular/predominantemente intelectual"},
+{s:"EPMAL", f:"Termos de promoção", b:"Antiguidade, Merecimento, Bravura, Post Mortem"},
+{s:"Constitucional", f:"Distrito Federal — competência legislativa", b:"O Distrito Federal legisla tanto como Estado quanto como Município"},
+{s:"Constitucional", f:"Competências privativas da União (mnemônico: CAPACETE DE PMS)", b:"Civil, Agrário, Penal, Aeronáutico, Comercial, Eleitoral, Trabalho/transporte/trânsito, Espacial, Desapropriação, Processual, Marítimo, Seguro social"},
+{s:"Constitucional", f:"Competência comum — verbos-chave", b:"Verbos como \"proteger, cuidar, tutelar, acompanhar\" indicam competência comum entre União, Estados, DF e Municípios"},
+{s:"Processo Penal", f:"Perempção na ação penal", b:"Não ocorre perempção na ação penal pública, apenas na ação penal privada subsidiária da pública"},
+{s:"Informática", f:"Planilhas: linhas x colunas", b:"Linhas → números\nColunas → letras"},
+{s:"Processo Penal", f:"Representação da vítima", b:"A representação é a autorização da vítima para que o Estado prossiga com o processo do crime\nAntes de oferecer a denúncia → a vítima pode se retratar\nDepois de oferecida → não pode mais se retratar"},
+{s:"Português", f:"Concordância com expressões partitivas", b:"Expressões partitivas e quantitativas permitem que o verbo concorde no singular ou no plural\nEx: \"grande número de pessoas foi/foram\""},
+{s:"Português", f:"Sujeito e preposição", b:"O sujeito nunca é iniciado por preposição"},
+{s:"Estatuto do PM", f:"Conselho de justificação x disciplina", b:"Oficial → Conselho de Justificação\nPraça → Conselho de Disciplina"},
+{s:"Português", f:"Pronome relativo \"cujo\"", b:"O pronome relativo \"cujo(a)\" tem caráter anafórico, mas sua concordância é com o termo posterior"},
+{s:"Penal Militar", f:"Competência conforme o tipo de militar", b:"Militar estadual → Justiça Militar Estadual\nMilitar federal → Justiça Militar da União\nCrime doloso contra a vida → Tribunal do Júri"},
+{s:"Direito Penal", f:"Erro de tipo x erro de proibição", b:"\"Achar que pode\" → erro de proibição\n\"Achar que está acontecendo\" (o que não está) → erro de tipo"},
+{s:"Penal Militar", f:"CPPM — prazos de denúncia e inquérito", b:"Denúncia → réu preso: 5 dias / solto: 15 dias\nInquérito → réu preso: 20 dias / solto: 40 dias (prorrogável)"},
+{s:"Penal Militar", f:"CPPM — fiança", b:"O CPPM não admite fiança"},
+{s:"Informática", f:"Excel — referências de célula", b:"=A2 → referência relativa\n=$A$2 → referência absoluta\n=A$2 ou =$A2 → referência mista"},
+{s:"Administrativo", f:"Abuso de poder: excesso x desvio", b:"Excesso de poder → agente ultrapassa o limite da sua competência\nDesvio de poder → agente age dentro da competência, mas com finalidade errada"},
+{s:"Administrativo", f:"Princípios da Administração Pública (LIMPE)", b:"Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência"},
+{s:"Constitucional", f:"Remédios constitucionais I", b:"Habeas Corpus → protege a liberdade de locomoção (repressivo e preventivo)\nMandado de Segurança → protege direito líquido e certo não amparado por HC ou HD, contra ilegalidade/abuso de autoridade"},
+{s:"Constitucional", f:"Remédios constitucionais II", b:"Mandado de Injunção → usado quando falta norma regulamentadora que inviabiliza um direito constitucional\nAção Popular → permite ao cidadão zelar pelo patrimônio público e moralidade administrativa (art. 5º)"},
+{s:"Administrativo", f:"Administração — sentido objetivo", b:"Conjunto de atividades administrativas exercidas pelo Estado"},
+{s:"Administrativo", f:"Desconcentração x descentralização", b:"Desconcentração → divisão interna de competências dentro da MESMA pessoa jurídica\nDescentralização → transferência de competência para OUTRA pessoa jurídica"},
+{s:"Português", f:"\"Se\" reflexivo — teste de substituição", b:"Para saber se o \"se\" é reflexivo, tente substituir por um nome próprio\nEx: \"Ana vestiu-se rápido\" → \"Ana vestiu Lilian rápido\""},
+{s:"Constitucional", f:"Inafiançável, imprescritível, insuscetível", b:"Inafiançável → não admite fiança\nImprescritível → não perde validade com o tempo\nInsuscetível de graça ou anistia → não pode receber indulto/perdão"},
+{s:"Constitucional", f:"Rol taxativo x exemplificativo", b:"Rol taxativo → lista completa e definitiva (só aquelas hipóteses)\nRol exemplificativo → lista aberta, apenas exemplos"},
+{s:"Constitucional", f:"Art. 5º — caput", b:"Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo aos brasileiros e estrangeiros residentes no país a inviolabilidade do direito à vida, liberdade, igualdade, segurança e propriedade"},
+];
+
+let order = DATA.map((_,i)=>i);
+let idx = 0;
+let flipped = false;
+let currentSubject = "Todas";
+
+const cardEl = document.getElementById('card');
+const frontText = document.getElementById('frontText');
+const backText = document.getElementById('backText');
+const tagFront = document.getElementById('tagFront');
+const tagBack = document.getElementById('tagBack');
+const progress = document.getElementById('progress');
+const subjectFilter = document.getElementById('subjectFilter');
+const listView = document.getElementById('listView');
+
+function subjects(){
+  const set = new Set(DATA.map(d=>d.s));
+  return ["Todas", ...Array.from(set).sort()];
+}
+
+function populateFilter(){
+  subjectFilter.innerHTML = subjects().map(s=>`<option value="${s}">${s}</option>`).join('');
+}
+
+function filteredOrder(){
+  if(currentSubject === "Todas") return DATA.map((_,i)=>i);
+  return DATA.map((_,i)=>i).filter(i=>DATA[i].s === currentSubject);
+}
+
+function render(){
+  if(order.length === 0){
+    frontText.textContent = "Nenhum cartão nessa matéria.";
+    backText.textContent = "";
+    progress.textContent = "";
+    return;
+  }
+  const item = DATA[order[idx]];
+  tagFront.textContent = item.s;
+  tagBack.textContent = item.s;
+  frontText.textContent = item.f;
+  backText.textContent = item.b;
+  progress.textContent = `${idx+1} / ${order.length}`;
+  cardEl.classList.toggle('flipped', flipped);
+}
+
+function flip(){
+  flipped = !flipped;
+  cardEl.classList.toggle('flipped', flipped);
+}
+
+function next(){
+  flipped = false;
+  idx = (idx+1) % order.length;
+  render();
+}
+function prev(){
+  flipped = false;
+  idx = (idx-1+order.length) % order.length;
+  render();
+}
+function shuffle(){
+  for(let i=order.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [order[i],order[j]]=[order[j],order[i]];
+  }
+  idx = 0; flipped = false;
+  render();
+}
+
+function renderList(){
+  listView.innerHTML = DATA.map(d=>`
+    <div class="list-item">
+      <div class="li-tag">${d.s}</div>
+      <b>${d.f}</b>
+      <div class="li-back">${d.b}</div>
+    </div>
+  `).join('');
+}
+
+cardEl.addEventListener('click', flip);
+document.getElementById('flipBtn').addEventListener('click', flip);
+document.getElementById('nextBtn').addEventListener('click', next);
+document.getElementById('prevBtn').addEventListener('click', prev);
+document.getElementById('shuffleBtn').addEventListener('click', shuffle);
+document.getElementById('subjectFilter').addEventListener('change', (e)=>{
+  currentSubject = e.target.value;
+  order = filteredOrder();
+  idx = 0; flipped = false;
+  render();
+});
+document.getElementById('listToggleBtn').addEventListener('click', ()=>{
+  listView.classList.toggle('show');
+  document.getElementById('listToggleBtn').textContent = listView.classList.contains('show') ? '📋 Fechar lista' : '📋 Ver lista completa';
+});
+
+populateFilter();
+renderList();
+render();

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards PMAL — Mural de Post-its</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrap">
+  <header>
+    <h1>Mural de Post-its → Flashcards</h1>
+    <div class="sub">PMAL SD 2026 · toque no cartão pra virar</div>
+  </header>
+
+  <div class="toolbar">
+    <select id="subjectFilter"></select>
+    <button id="shuffleBtn">🔀 Embaralhar</button>
+    <button id="listToggleBtn">📋 Ver lista completa</button>
+    <span class="progress" id="progress"></span>
+  </div>
+
+  <div class="stage">
+    <div class="card" id="card">
+      <div class="face front">
+        <span class="tag" id="tagFront"></span>
+        <div class="front-text" id="frontText"></div>
+        <div class="hint">toque pra ver a resposta</div>
+      </div>
+      <div class="face back">
+        <span class="tag" id="tagBack"></span>
+        <p class="back-text" id="backText"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button id="prevBtn">← Anterior</button>
+    <button class="primary" id="flipBtn">Virar</button>
+    <button id="nextBtn">Próximo →</button>
+  </div>
+
+  <div class="list" id="listView"></div>
+
+  <footer>Transcrito das fotos do mural · fala comigo se algum cartão estiver errado</footer>
+</div>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
