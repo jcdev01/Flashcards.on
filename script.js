@@ -48,7 +48,7 @@ const DATA = [
 {s:"Direito Penal Militar", f:"CPPM — prazos de denúncia e inquérito", b:"Denúncia → réu preso: 5 dias / solto: 15 dias\nInquérito → réu preso: 20 dias / solto: 40 dias (prorrogável)"},
 {s:"Direito Penal Militar", f:"Crime propriamente x impropriamente militar", b:"Propriamente militar → só pode ser cometido por militar, previsto exclusivamente no CPM\nImpropriamente militar → pode ser cometido por civil ou militar, previsto no CPM e no CP"},
 {s:"Direito Penal Militar", f:"Crimes contra a administração militar", b:"Peculato → desvia bem público\nCorrupção ativa → oferece vantagem indevida\nConcussão → exige vantagem indevida\nPrevaricação → retarda ou deixa de praticar ato de ofício\nCorrupção passiva → recebe ou solicitar vantagem indevida"},
-{s:"Direito penal militar", f:"Motin x Revolta",b:"Motim → sem armas \n Revolta → com armas "},
+{s:"Direito Penal Militar", f:"Motin x Revolta",b:"Motim → sem armas \n Revolta → com armas "},
 {s:"Direito Penal Militar", f:"Justiça militar estadual — competência", b:"A Justiça Militar Estadual não julga civis"},
 {s:"Direito Processual Penal", f:"Ação penal: requisição x requerimento", b:"Requisição → feita por autoridade competente\nRequerimento → pedido feito pelo ofendido"},
 {s:"Direito Processual Penal", f:"Denúncia sem inquérito", b:"A denúncia pode ser oferecida sem o inquérito concluído, ou até mesmo sem inquérito\nCondição: indícios de autoria e prova da materialidade"},
