@@ -67,14 +67,14 @@
     order:10;
   }
   .stage{
-    perspective:1600px;
+    perspective: 1800px;
     margin:18px auto;
     max-width:560px;
   }
   .card{
     position:relative;
     width:100%;
-    min-height:clamp(240px, 42vw, 280px);
+    min-height:clamp(360px, 42vw, 280px);
     transform-style:preserve-3d;
     transition: transform 0.5s cubic-bezier(.4,.2,.2,1);
     cursor:pointer;
