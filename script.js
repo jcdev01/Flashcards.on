@@ -42,6 +42,8 @@ const DATA = [
 {s:"Direito Penal", f:"Erro de tipo x erro de proibição", b:"\"Achar que pode\" → erro de proibição\n\"Achar que está acontecendo\" (o que não está) → erro de tipo"},
 {s:"Direito Penal", f:"Excludentes de ilicitude ", b:"Legítima defesa\nEstado de necessidade\nEstrito cumprimento do dever legal\nExercício regular do direito"},
 {s:"Direito Penal", f:"Extraterritorialidade da lei penal", b:"Incondicionada → lei brasileira aplicada sem exigir condições\nCondicionada → aplicada se existirem as condições necessárias\nHipercondicionada → estrangeiro pratica crime contra brasileiro fora do país"},
+{s:"Direito Penal", f:"Extraterritorialidade -incodicionada", b:"Casos de extraterritorialidade incondicionada:\n\nCrimes contra a vida ou liberdade do Presidente da República\nCrimes contra a vida ou liberdade do Presidente da República, Vice-Presidente e Ministros de Estado\nCrimes contra a vida ou liberdade de diplomatas e agentes estrangeiros"},
+{s:"Direito Penal", f:"Extraterritorielidade -condicionada", b:"Casos de extraterritorialidade condicionada:\n\nCrimes que por tratado "},
 {s:"Direito Penal", f:"Fases do crime (iter criminis)", b:"Cogitação → Preparação → Execução → Consumação / Exaurimento"},
 {s:"Direito Penal", f:"Retroatividade x ultratividade", b:"Retroatividade → aplicação de lei nova mais benéfica a fatos ocorridos antes da sua vigência\nUltratividade → aplicação de lei antiga (já revogada) a fatos ocorridos antes da nova lei"},
 {s:"Direito Penal", f:"Tempo e lugar do crime", b:"Tempo do crime → teoria da atividade (momento da ação/omissão)\nLugar do crime → teoria da ubiquidade (lugar da ação ou do resultado)"},
