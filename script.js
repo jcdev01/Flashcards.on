@@ -51,6 +51,7 @@ const DATA = [
 {s:"Direito Penal Militar", f:"Competência conforme o tipo de militar", b:"Militar estadual → Justiça Militar Estadual\nMilitar federal → Justiça Militar da União\nCrime doloso contra a vida → Tribunal do Júri"},
 {s:"Direito Penal Militar", f:"CPM — extraterritorialidade", b:"No Código Penal Militar existe apenas a extraterritorialidade incondicionada"},
 {s:"Direito Penal Militar", f:"Crime propriamente x impropriamente militar", b:"Propriamente militar → só pode ser cometido por militar, previsto exclusivamente no CPM\nImpropriamente militar → pode ser cometido por civil ou militar, previsto no CPM e no CP"},
+{s:"Direito Penal Militar", f:"crimes contra a administração militar", b:"Desacato a superior \nDesacato a militar\nDesacato a servidor público\nDesobediência\nIgresso clandestino"},
 {s:"Direito Penal Militar", f:"Crimes contra a administração militar", b:"Peculato → desvia bem público\nCorrupção ativa → oferece vantagem indevida\nConcussão → exige vantagem indevida\nPrevaricação → retarda ou deixa de praticar ato de ofício\nCorrupção passiva → recebe ou solicitar vantagem indevida"},
 {s:"Direito Penal Militar", f:"Medidas de segurança ",b:"Pessoais:\nDententivas → Internação em estabelecimento de custódia e tratamento ou seção especial da legilção penal\nNão dententivas → Tratemento ambulatório, a interdição de licença para direção de veículos motorizados,o exílio local e a proibição de frequentar determinados lugares\n\nPatrimoniais:\nCompreende a interdição de bens ou sede de sociedade ou associação e o cofisco"},
 {s:"Direito Penal Militar", f:"Motin x Revolta",b:"Motim → sem armas \n Revolta → com armas "},
@@ -62,6 +63,7 @@ const DATA = [
 {s:"Direito Processual Penal", f:"Representação da vítima", b:"A representação é a autorização da vítima para que o Estado prossiga com o processo do crime\nAntes de oferecer a denúncia → a vítima pode se retratar\nDepois de oferecida → não pode mais se retratar"},
 {s:"Direito Processual Penal Militar", f:"Processo Penal Militar — fiança", b:"O CPPM não admite fiança"},
 {s:"Direito Processual Penal Militar", f:"Inquerito — prazos de denúncia e inquérito", b:"Denúncia → réu preso: 5 dias / solto: 15 dias\nInquérito → réu preso: 20 dias / solto: 40 dias (prorrogável)"},
+{s:"Direito Procesual Penal MIlitar",  f:"Menagem", b:" A menagem poderá ser concedida pelo juiz, nos crimes cujo máximo da pena privativa da liberdade não exceda a quatro anos, tendo-se, porém, em atenção a natureza do crime e os antecedentes do acusado."},
 {s:"Estatuto da PM", f:"Apuração de transgressões", b:"Parte disciplinar → Documento que narra transgressão de policial de posto ou graduação inferior\nComunicação disciplinar → Documento que narra transgressão de superior hierarquico" },
 {s:"Estatuto da PM", f:"Classificação comportamental", b:"Excepcional\nÓtimo\nBom\nInsuficiente\nMau → quebra de expectativa"},
 {s:"Estatuto da PM", f:"Conselho de justificação x disciplina", b:"Oficial → Conselho de Justificação\nPraça → Conselho de Disciplina"},
@@ -112,7 +114,14 @@ const DATA = [
 {s:"Português", f:"Verbo \"visar\" — três sentidos", b:"1º sentido (pretender/almejar) → exige preposição \"a\"\n2º sentido (apontar/mirar) → não exige preposição\n3º sentido (assinar) → não exige preposição"},
 {s:"Português", f:"Vírgula com advérbios", b:"Advérbio de até 2 palavras → vírgula facultativa\nAdvérbio de 3 ou mais palavras → vírgula obrigatória"},
 {s:"Português", f:"Termos acessórios",b:"Adjuntos adnominais → Liga-se a um substantivo,servindo para caracerizar,determinar ou especificar\nAdjunto adverbial → Liga-se a um verbo,adjetivo ou advérbio,indicando circunstância " },
-
+{s:"Redação", f:"Conectivos — Iniciar ideia", b:"Inicialmente\nPrimeiramente\nDe início\nEm primeiro lugar"},
+{s:"Redação", f:"Conectivos — Adicionar nova ideia", b:"Além disso\nAdemais\nOutrosimm\nDo mesmo modo\nDa mesma forma"},
+{s:"Redação", f:"Conectivos — Concluir ideia",b:"Por fim\nEm conclusão\nPortanto\n"},
+{s:"Redação", f:"Conectivos — Contunuiddade",b:"Sob esse viés\nDessa forma\nNessa lógica\nNessa perspectiva\nDiante disso"},
+{s:"Redação", f:"Papeis constitucionais da pm",b:"Policiamento ostensivo\npreservação da ordem pública"},
+{s:"Redação", f:"Feminicídio",b:"Criado em 2015\nPrincipal objetivo:Impedir a violência de gênero\nNão diminuiu os casos por vincular também razões sociais e estruturais\nA cada 5 horas acontece um feminicídio"},
+{s:"Redação", f:"Racismo",b:"O racismo foi considerado crime em 1988 com a CF\nSó foi punido com pena após de recluão com a lei de crimes contra raça e preconceito "},
+{s:"Redação", f:"Conectivos — Consequência",b:"Portanto\nLogo\nConsequentemente\nEm razão disso\nPor conseguinte"}
 ];
 
 
