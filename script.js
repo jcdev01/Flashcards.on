@@ -52,6 +52,7 @@ const DATA = [
 {s:"Direito Penal Militar", f:"CPM — extraterritorialidade", b:"No Código Penal Militar existe apenas a extraterritorialidade incondicionada"},
 {s:"Direito Penal Militar", f:"Crime propriamente x impropriamente militar", b:"Propriamente militar → só pode ser cometido por militar, previsto exclusivamente no CPM\nImpropriamente militar → pode ser cometido por civil ou militar, previsto no CPM e no CP"},
 {s:"Direito Penal Militar", f:"Crimes contra a administração militar", b:"Peculato → desvia bem público\nCorrupção ativa → oferece vantagem indevida\nConcussão → exige vantagem indevida\nPrevaricação → retarda ou deixa de praticar ato de ofício\nCorrupção passiva → recebe ou solicitar vantagem indevida"},
+{s:"Direito Penal Militar", f:"Medidas de segurança ",b:"Pessoais:\nDententivas → Internação em estabelecimento de custódia e tratamento ou seção especial da legilção penal\nNão dententivas → Tratemento ambulatório, a interdição de licença para direção de veículos motorizados,o exílio local e a proibição de frequentar determinados lugares\n\nPatrimoniais:\nCompreende a interdição de bens ou sede de sociedade ou associação e o cofisco"},
 {s:"Direito Penal Militar", f:"Motin x Revolta",b:"Motim → sem armas \n Revolta → com armas "},
 {s:"Direito Penal Militar", f:"Justiça militar estadual — competência", b:"A Justiça Militar Estadual não julga civis"},
 {s:"Direito Processual Penal", f:"Ação penal: requisição x requerimento", b:"Requisição → feita por autoridade competente\nRequerimento → pedido feito pelo ofendido"},
