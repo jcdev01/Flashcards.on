@@ -30,7 +30,6 @@ const DATA = [
 {s:"Direito Constitucional", f:"Concessão, permissão e autorização", b:"União → concessão, permissão e autorização\nEstados → apenas concessão\nMunicípios → concessão e permissão"},
 {s:"Direito Constitucional", f:"Direitos negativos x positivos", b:"Direitos negativos (1ª geração) → o Estado NÃO pode interferir\nDireitos positivos (2ª geração) → o Estado TEM o dever de intervir"},
 {s:"Direito Constitucional", f:"Distrito Federal — competência legislativa", b:"O Distrito Federal legisla tanto como Estado quanto como Município"},
-{s:"Direito Constitucional", f:"Inafiançável, imprescritível, insuscetível", b:"Inafiançável → não admite fiança\nImprescritível → não perde validade com o tempo\nInsuscetível de graça ou anistia → não pode receber indulto/perdão"},
 {s:"Direito Constitucional", f:"Remédios constitucionais I", b:"Habeas Corpus → protege a liberdade de locomoção (repressivo e preventivo)\nMandado de Segurança → protege direito líquido e certo não amparado por HC ou HD, contra ilegalidade/abuso de autoridade\nHabeas data → Garante o conhecimento e correção  de dados pessoais em banco de dados público "},
 {s:"Direito Constitucional", f:"Remédios constitucionais II", b:"Mandado de Injunção → usado quando falta norma regulamentadora que inviabiliza um direito constitucional\nAção Popular → permite ao cidadão anular atos lesivos ao patrimônio público,moralidade administrativa ou meio-hambiente"},
 {s:"Direito Constitucional", f:"Rol do art. 5º", b:"O rol do artigo 5º é exemplificativo e não taxativo"},
