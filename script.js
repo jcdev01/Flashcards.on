@@ -181,6 +181,11 @@ const DATA = [
 {s:"Redação", f:"Racismo", b:"O racismo foi considerado crime em 1988 com a CF\nSó foi punido com pena após de recluão com a lei de crimes contra raça e preconceito"}
 ];
 
+const CUSTOM_KEY = 'pmal_custom_cards';
+let custom = [];
+try { custom = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]'); } catch(e) {}
+DATA.push(...custom);
+
 let order = DATA.map((_,i)=>i);
 let idx = 0;
 let flipped = false;
@@ -275,6 +280,79 @@ document.getElementById('listToggleBtn').addEventListener('click', ()=>{
   document.getElementById('listToggleBtn').textContent = listView.classList.contains('show') ? '📋 Fechar lista' : '📋 Ver lista completa';
 });
 
+// ---------- Adicionar cards ----------
+const addDialog = document.getElementById('addDialog');
+const addForm = document.getElementById('addForm');
+const newSubject = document.getElementById('newSubject');
+const newSubjectCustom = document.getElementById('newSubjectCustom');
+const newFront = document.getElementById('newFront');
+const newBack = document.getElementById('newBack');
+const NEW_OPTION = '__nova__';
+
+function fillSubjectSelect(preselect){
+  const list = subjects().filter(s => s !== "Todas");
+  newSubject.innerHTML =
+    list.map(s => `<option value="${s}">${s}</option>`).join('') +
+    `<option value="${NEW_OPTION}">➕ Nova matéria…</option>`;
+  if (preselect && list.includes(preselect)) newSubject.value = preselect;
+  newSubjectCustom.hidden = newSubject.value !== NEW_OPTION;
+}
+
+newSubject.addEventListener('change', () => {
+  newSubjectCustom.hidden = newSubject.value !== NEW_OPTION;
+  if (!newSubjectCustom.hidden) newSubjectCustom.focus();
+});
+
+document.getElementById('addBtn').addEventListener('click', () => {
+  fillSubjectSelect(currentSubject);
+  addForm.reset();
+  fillSubjectSelect(currentSubject);
+  addDialog.showModal();
+  newFront.focus();
+});
+
+document.getElementById('cancelAdd').addEventListener('click', () => addDialog.close());
+
+addForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const s = (newSubject.value === NEW_OPTION ? newSubjectCustom.value : newSubject.value).trim();
+  const f = newFront.value.trim();
+  const b = newBack.value.trim();
+  if (!s || !f || !b) return;
+
+  const card = { s, f, b };
+  DATA.push(card);
+  custom.push(card);
+  try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(custom)); } catch(e) {}
+
+  // vai para a matéria do card novo e mostra ele
+  currentSubject = s;
+  populateFilter();
+  subjectFilter.value = s;
+  order = filteredOrder();
+  idx = order.length - 1;
+  flipped = false;
+  renderList();
+  render();
+  addDialog.close();
+});
+
+// Gera as linhas prontas para colar no DATA
+document.getElementById('exportBtn').addEventListener('click', async () => {
+  if (!custom.length) { alert('Você ainda não adicionou nenhum card novo.'); return; }
+  const code = custom
+    .map(c => `{s:${JSON.stringify(c.s)}, f:${JSON.stringify(c.f)}, b:${JSON.stringify(c.b)}},`)
+    .join('\n');
+  try {
+    await navigator.clipboard.writeText(code);
+  } catch(e) {
+    prompt('Copie o código:', code);
+  }
+  if (confirm('Código copiado! Cole dentro do DATA no script.js.\n\nLimpar os cards salvos no navegador para não duplicar?')) {
+    localStorage.removeItem(CUSTOM_KEY);
+    location.reload();
+  }
+});
 populateFilter();
 renderList();
 render();

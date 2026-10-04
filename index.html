@@ -14,48 +14,73 @@
 
 </head>
 <body>
-<body>
 
   <div class="wrap">
-  <header>
-    <h1>Mural de Post-its → Flashcards</h1>
-    <div class="sub">PMAL SD 2026 · toque no cartão pra virar</div>
-  </header>
+    <header>
+      <h1>Mural de Post-its → Flashcards</h1>
+      <div class="sub">PMAL SD 2026 · toque no cartão pra virar</div>
+    </header>
 
-  <div class="toolbar">
-    <select id="subjectFilter"></select>
-    <button id="shuffleBtn">🔀 Embaralhar</button>
-    <button id="listToggleBtn">📋 Ver lista completa</button>
-    <span class="progress" id="progress"></span>
-  </div>
+    <div class="toolbar">
+      <select id="subjectFilter"></select>
+      <button id="shuffleBtn">🔀 Embaralhar</button>
+      <button id="listToggleBtn">📋 Ver lista completa</button>
+      <span class="progress" id="progress"></span>
+    </div>
 
-  <div class="stage">
-    <div class="card" id="card">
-      <div class="face front">
-        <span class="tag" id="tagFront"></span>
-        <div class="front-text" id="frontText"></div>
-        <div class="hint">toque pra ver a resposta</div>
-      </div>
-      <div class="face back">
-        <span class="tag" id="tagBack"></span>
-        <p class="back-text" id="backText"></p>
+    <div class="stage">
+      <div class="card" id="card">
+        <div class="face front">
+          <span class="tag" id="tagFront"></span>
+          <div class="front-text" id="frontText"></div>
+          <div class="hint">toque pra ver a resposta</div>
+        </div>
+        <div class="face back">
+          <span class="tag" id="tagBack"></span>
+          <p class="back-text" id="backText"></p>
+        </div>
       </div>
     </div>
+
+    <div class="nav">
+      <button id="prevBtn">← Anterior</button>
+      <button class="primary" id="flipBtn">Virar</button>
+      <button id="nextBtn">Próximo →</button>
+    </div>
+
+    <div class="actions">
+      <button id="addBtn">➕ Adicionar card</button>
+      <button id="exportBtn">📤 Copiar cards novos</button>
+    </div>
+
+    <div class="list" id="listView"></div>
   </div>
 
-  <div class="nav">
-    <button id="prevBtn">← Anterior</button>
-    <button class="primary" id="flipBtn">Virar</button>
-    <button id="nextBtn">Próximo →</button>
-  </div>
+  <dialog id="addDialog">
+    <form id="addForm">
+      <h2>Novo card</h2>
 
-  <div class="list" id="listView"></div>
+      <label>Matéria
+        <select id="newSubject"></select>
+      </label>
+      <input id="newSubjectCustom" placeholder="Nome da nova matéria" hidden>
 
+      <label>Frente (título)
+        <input id="newFront" required>
+      </label>
 
-</div>
-<script src="script.js"></script>
+      <label>Verso (resposta)
+        <textarea id="newBack" rows="7" required placeholder="Uma linha por tópico. Enter = quebra de linha"></textarea>
+      </label>
 
+      <div class="dlg-actions">
+        <button type="button" id="cancelAdd">Cancelar</button>
+        <button type="submit" class="primary">Salvar</button>
+      </div>
+    </form>
+  </dialog>
 
+  <script src="script.js"></script>
 
 </body>
 </html>
