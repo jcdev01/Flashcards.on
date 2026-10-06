@@ -161,7 +161,7 @@ const DATA = [
 {s:"Português", f:"Conectivos -pois", b:"Pois entre vírgulas,depois do verbo → conclusivo\nPois antes do verbo → explicativo"},
 {s:"Português", f:"Conectivos: adversativas x concessivas", b:"Adversativas → mas, porém, contudo, todavia, no entanto(oposição de ideias)\nConcessivas → embora, ainda que, mesmo que, apesar de(quebra de expectativa)"},
 {s:"Português", f:"Modos verbais", b:"Indicativo → certeza\nSubjuntivo → dúvida, hipótese, desejo\nImperativo → ordem, pedido"},
-{s:"Português", f:"Palavras Atrativas — próclise", b:"Negativas\nAdvérbios\nPronomes relativos,indefinidos,demostrativos e interrogativos"},
+{s:"Português", f:"Palavras Atrativas — próclise", b:"Negativas\nAdvérbios\nPronomes relativos,indefinidos,demostrativos e interrogativos\nConjunções subordinativas"},
 {s:"Português", f:"Pronome possessivo — referente", b:"O referente de um pronome possessivo é a PESSOA, e não o objeto possuído"},
 {s:"Português", f:"Pronome relativo \"cujo\"", b:"O pronome relativo \"cujo(a)\" tem caráter anafórico, mas sua concordância é com o termo posterior"},
 {s:"Português", f:"Pronome relativo \"onde\"", b:"O pronome relativo \"onde\" só se refere a lugares"},
