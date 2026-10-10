@@ -100,7 +100,7 @@ const DATA = [
 {s:"Informática", f:"Excel — referências de célula", b:"=A2 → referência relativa\n=$A$2 → referência absoluta\n=A$2 ou =$A2 → referência mista"},
 {s:"Informática", f:"Excel — funções", b:"Procv → procura em linhas e da o resultado em colunas\nProch → procura em colunas e da o resultado em linhas"},
 {s:"Informática", f:"Gerações de vírus/antivírus", b:"1ª geração → detecção por assinatura\n2ª geração → detecção heurística (características suspeitas)"},
-{s:"Informática", f:"Limite de caracteres em nome de arquivo", b:"Cada pasta ou arquivo pode ter até 255 caracteres no nome"},
+{s:"Informática", f:"Limite de caracteres em nome de arquivo", b:"Cada pasta ou arquivo pode ter até 255 caracteres no nome\nO caminho completo de um arquivo (incluindo pastas) pode ter até 260 caracteres"},
 {s:"Informática", f:"Malweres", b:"Um worm infecta a rede e não os arquivos"},
 {s:"Informática", f:"Phishing x Pharming x Vishing", b:"Phishing → e-mail ou site falso que rouba dados\nPharming → redireciona a URL para site falso mesmo digitando o endereço certo\nVishing → phishing por ligação telefônica"},
 {s:"Informática", f:"Planilhas: linhas x colunas", b:"Linhas → números\nColunas → letras"},
@@ -179,6 +179,8 @@ const DATA = [
 {s:"Redação", f:"Feminicídio", b:"Criado em 2015\nPrincipal objetivo:Impedir a violência de gênero\nNão diminuiu os casos por vincular também razões sociais e estruturais\nA cada 5 horas acontece um feminicídio"},
 {s:"Redação", f:"Papeis constitucionais da pm", b:"Policiamento ostensivo\npreservação da ordem pública"},
 {s:"Redação", f:"Racismo", b:"O racismo foi considerado crime em 1988 com a CF\nSó foi punido com pena após de recluão com a lei de crimes contra raça e preconceito"}
+
+
 ];
 
 const CUSTOM_KEY = 'pmal_custom_cards';
