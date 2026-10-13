@@ -108,7 +108,7 @@ const DATA = [
 {s:"Legislação da PM", f:"Agregação", b:"A agregação é a situação na qual o policial-militar da ativa deixa de ocupar vaga na escala hierárquica de seu quadro ou Qualificação, nela permanecendo sem número."},
 {s:"Legislação da PM", f:"Apuração de transgressões", b:"Parte disciplinar → Documento que narra transgressão de policial de posto ou graduação inferior\nComunicação disciplinar → Documento que narra transgressão de superior hierarquico"},
 {s:"Legislação da PM", f:"Ausente Deserção Desaparecimento Extravio", b:"Ausente → 24 horas sem comunicar a ausência\nDeserção → Mais de 8 dias sem comunicar a ausência\nDesaparecido → mais de 8 dias (em serviço, operação policial-militar, viagem, calamidade pública ou outra situação semelhante)\nExtravio → 30 dias desaparecido,"},
-{s:"Legislação da PM", f:"Classificação comportamental", b:"Excepcional\nÓtimo\nBom\nInsuficiente\nMau → quebra de expectativa"},
+{s:"Legislação da PM", f:"Classificação comportamental", b:"Excepcional\nÓtimo\nBom\nInsuficiente\nMau → Poderá ser excluido do serviço ativo, ou seja, demitido ou excluido"},
 {s:"Legislação da PM", f:"Conselho de justificação x disciplina", b:"Oficial → Conselho de Justificação\nPraça → Conselho de Disciplina"},
 {s:"Legislação da PM", f:"Deserção", b:"Se o policial militar for oficial ou praça com estabilidade, deverá ele ser agregado e após 6 meses de agregação não havendo captura ou apresentação deverá ele ser demitido ou excluido\nA praça sem estabilidade deverá ser automaticamente excluida"},
 {s:"Legislação da PM", f:"Inatividade — prazos", b:"Pensão → 35 anos, com 30 de serviço ativo\nReserva → 30 anos\nReforma → 12 anos"},
